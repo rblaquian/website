@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="/pics/serenceI.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        body{
+          margin: 0px;
+          background-color: #F0EBE6;
+        }
+        .content{
+          font-family: "Poppins", sans-serif;
+          color: #A87453;
+          font-size: 40px;
+          padding-top: 50px;
+          padding-bottom: 20px;
+        }
+        .text{
+          color: #A87453;
+        }
+        .prof{
+          margin-top: 130px;
+        }
+        .prof .card .info .social{
+          box-shadow: 0 0 20px  #A87453, 0 0 20px #A87453, 0 0 30px #A87453;
+          text-align: center;
+          width: 80%;
+          position: relative;
+          top: -10%;
+          z-index: 2;
+          background: var(--white);
+          left: 10%;
+          border-radius: 0.8rem;
+        }
+        .prof .card .info{
+          text-align: center;
+          width: 80%;
+          position: relative;
+          top: -10%;
+          z-index: 2;
+          background: var(--white);
+          left: 10%;
+          border-radius: 0.8rem;
+        }
+        .prof .card .info .social p{
+          font-size: 1.5rem;
+          padding: 1.2rem 0;
+        }
+        .prof .card .info .social a{
+          display: inline-block;
+          margin: 0.7rem;
+          width: 4rem;
+          height: 4rem;
+          background: var(--bg);
+          color: var(--white);
+          line-height: 4rem;
+          font-size: 1.5rem;
+          background-color: #A87453;
+          border-radius: 50px;
+          color: #F0EBE6;
+          text-decoration: none;
+        }
+        .prof .card .info .social a:hover{
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+        .card{
+          position:relative;
+          display: flex;
+          margin-top: 50px;
+          top: 120px;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          height: 40vh;
+          align-items: center;
+          text-align: center;
+          width: 400px;
+          transition: 0.5s ease-out;
+          background-color: #A87453;
+        }
+        .img{ 
+          position: relative;
+          float: left;
+          height:60%;
+          width: 500px;
+          padding: 10px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          margin-left: -50px;
+          transition: 0.5s ease-out;
+        }
+        img{
+          width: 350px;
+          height: 300px;
+          left: -5%;
+          transition: 0.5s ease-out;
+        }
+        .info{
+          background: none;
+          float: right;
+          padding: 0 20px;
+          transition: 0.3s ease-out;
+          width: 50%;
+          margin-top: -30px;
+          text-align: center;
+          opacity: 0;
+        }
+        .card:hover .info{
+          margin-right: 100px;
+          visibility:visible;
+          opacity: 1;
+          background-color: #F0EBE6;
+          border: 1px solid #A87453;
+        }
+        .card:hover{
+          width: 900px;
+        }
+        .btn:hover{
+          background: var(--bg);
+          color: var(--white);
+          transform: translate(0px,-3px);
+        }
+        footer {
+          width: 100%;
+          height: 80px;
+          background-color: #A87453;
+          position: relative;
+        }
+        #ftext{
+          text-align: center;
+          font-family: "Poppins", sans-serif;
+          font-weight: bold;
+          font-size: 15px;
+          color: #F0EBE6;
+          padding-top: 30px;
+        }
+        .media{
+          border: 1px solid #A87453;
+          height: 5px;
+          background-color: #A87453;
+          font-family: "Poppins", sans-serif;
+        }
+        .au-img{
+          box-shadow: 0 0 20px  #A87453, 0 0 20px #A87453, 0 0 30px #A87453;
+          border: 2px solid #A87453;
+        }
+        #abtus{
+          font-size: 60px;
+          color: #F0EBE6;
+          text-align: left;
+          font-family: "Poppins", sans-serif;
+          margin-bottom: -10px;
+          padding-left: 50px;
+        }
+        #about{
+          font-family: "Montserrat", sans-serif; 
+          text-align: center;
+          font-size: 18px;
+          color: #F0EBE6;
+          padding: 50px;
+          padding-bottom: 25px;
+          text-align: left;
+        }
+        #au-container{
+          margin: 100px;
+          background-color: #A87453;
+          padding-top: 5px;
+          padding-bottom: 20px;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          box-shadow: 0 0 20px  #A87453, 0 0 20px #A87453, 0 0 30px #A87453;
+        }
+        #au-container1{
+          background-color: #F0EBE6;
+          text-align: center;
+        }
+        #about1{
+          padding: 50px;
+          font-weight: bold;
+          line-height: 30px;
+          word-spacing: 3px;
+          padding-bottom: 70px;
+        }
+        nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0ebe6;
+        width: 100%;
+        }
+        #navi {
+          margin: auto;
+          padding: auto;
+          margin-top: 10px;
+        }
+        #navi li{
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          border:none;
+          position: relative;
+          display: inline-block;
+          margin: 20px;
+        }
+        #navi a{
+          color: black;
+          text-decoration: none;
+        }
+        #navi li:hover{
+          border: none;
+           list-style-type: none;
+        }
+        #navi li::after{
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 2px;
+          left: 50%;
+          bottom:0;
+          background-color: black;
+          transition: all ease-in-out .2s;
+        }
+        #navi li:hover::after{
+          width: 100%;
+          left: 0;
+        }
+        #navi a.active4, a:hover{
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 5px;
+        }
+        .logo {
+          float: left;
+          width: fit-content;
+          cursor: default;
+        }
+        .logo img {
+          height: auto;
+          width: 120px;
+          margin: auto;
+          padding-top: 10px;
+          margin-bottom: 10px;
+        }
+        #logoname {
+          margin-bottom: -1px;
+          margin-top: 23px;
+          color: #a87453;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          text-align: center;
+          font-size: 24px;
+          width: fit-content;
+          margin-bottom: 10px;
+          margin-left: 10px;
+        }
+        #logoname2 {
+          color: black;
+          font-family: "Montserrat", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+          width: fit-content;
+          align-items: center;
+          text-decoration: underline;
+          text-decoration-color: #cba982;
+          text-underline-offset: 10px;
+        }
+        .cart {
+          width: 200px;
+          height: 30px;
+          margin-right: 20px;
+          margin-bottom: 10px;
+        }
+        .cart img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          margin-left: 160px;
+          margin-top: -2px;
+        }
+        .cart img:hover{
+            transform: scale(1.2);
+            transition-duration: 0.5s;
+        }
+        .cart img:active{
+          transform: translateY(4px);
+        }
+        .line {
+          width: 800px;
+        }
+        .lineUp {
+          animation: 3s anim-lineUp ease-out;
+        }
+        .name{
+          color: #A87453;
+          font-family: "Poppins", sans-serif;
+          font-size: 30px;
+          padding-top: 20px;
+        }
+        p{
+          color: #A87453;
+          font-family: "Montserrat", sans-serif;  
+          margin-top: -20px;
+          padding-bottom: 20px;
+          font-size: 20px;
+        }
+        .hidden{
+        display: none;
+        }
+        #cartt{
+          background-color: #F0EBE6;
+          border: 1px solid black;
+          padding: 20px;
+          border-radius: 5px;
+          margin-top: -10px;
+          color: black;
+          width: 300px;
+          font-family: "Poppins", sans-serif;
+          font-size: larger;
+          text-align: center;
+          float: right;
+          margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        const cartIcon = document.getElementById("cart-icon");
+        const cart = document.getElementById("cartt");
+        const btn = document.getElementById("btn");
+
+        cartIcon.addEventListener("click", function() {
+        cart.classList.toggle("hidden");
+        });
+      });
+  </script>
+
+  <nav>
+    <div class="logo"><img src="https://i.ibb.co/FwPkDDN/WS-Website-draft-design-1.png" alt="logo"></div><p id="logoname">SERENE <span id="logoname2">ACCESORIES</span></p>
+    <ul id="navi">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="products.html" class="active1">PRODUCTS</a></li>
+        <li><a href="onsale.html" class="active2">ON SALE</a></li>
+        <li><a href="gallery.html" class="active3">GALLERY</a></li>
+        <li><a href="aboutus.html" class="active4">ABOUT US</a></li>
+    </ul>
+    <div id="prod"></div>
+    <div class="cart" id="cart-icon"><img src="https://i.ibb.co/w4vpFK0/cart-icon-28356.png"></div>
+</nav>
+
+<div id="cartt" class="hidden">Go to PRODUCTS to view.</div>
+    
+</div>    
+<section class="prof" id="prof">
+<div class="card">
+    <div class="img">
+        <img src="pics/Ken.jpg" alt="Aeisly" class="au-img">
+    </div>
+    <div class="info">
+        <h1 class="name">Aeisly Ken M. Torres</h1><br>
+        <p>Socials</p>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100092475284065&mibextid=ZbWKwL" <i class="fa-brands fa-facebook"></i> </a>
+            <a href="https://www.instagram.com/non_coolant?igsh=MTVyYTN4MGN2Ynlmdw%3D%3D&utm_source=qr" <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<br><br>
+<div class="card">
+    <div class="img">
+        <img src="pics/Antonette.jpg" alt="Antonette" class="au-img">
+    </div>
+    <div class="info">
+        <h1 class="name">Antonette E. Agustin</h1><br>
+        <p>Socials</p>
+        <div class="social">
+            <a href="https://www.facebook.com/antonetteagustn?mibextid=ZbWKwLs" <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/antonettegstn?igsh=MTlrZXlrNXVrNmNqNg==" <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<br><br>
+<div class="card">
+    <div class="img">
+        <img src="pics/Marco.jpeg" alt="Marco" class="au-img">
+    </div>
+    <div class="info">
+        <h1 class="name">Marco Louie L. Calma</h1><br>
+        <p>Socials</p>
+        <div class="social">
+            <a href="https://www.facebook.com/marco.calma.79" <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/marc02828?igsh=MTRsOHhpNDE5ZnVn" <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<br><br>
+<div class="card">
+    <div class="img">
+        <img src="pics/Rubelene.jpg" alt="Rubelene" class="au-img">
+    </div>
+    <div class="info">
+        <h1 class="name">Rubelene L. Laquian</h1><br>
+        <p>Socials</p>
+        <div class="social">
+            <a href="https://www.facebook.com/lqnrub" <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/rb_lqn?igsh=YngwaWJrazV3Ynk1" <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<br><br>
+    
+<div id="au-container">
+        <h1 id="abtus">Hello,</h1>
+        <p id="about">
+          Welcome to Serene Accessories! Your ultimate destination for premium beads accessories. 
+          Founded in 2024 in the Philippines and based in Pampanga. <br><br>
+          Serene Accessories is a humble enterprise with a grand vision driven by our unwavering passion for beads accessories. <br><br>
+          We have sought to be a trusted purveyor of top-tier products dedicated to exceeding our customers’ expectations. 
+          Our commitment to quality is unwavering, ensuring that every item we offer is crafted with meticulous attention and detail and designed to enrich your life. <br><br>
+          At Serene Accessories, customer satisfaction is our utmost priority. 
+          Our knowledgeable and friendly team here to assist you every step of the way, providing personalized recommendations and unparalleled service. <br><br>
+          As champions of innovation, we are constantly exploring new horizons to bring you the latest trends and cutting edge solutions. 
+          Whether you’re seeking a bead bracelet and beads ring, or anything in between. You can trust Serene Accessories to deliver excellence right to your doorstep. <br><br>
+          Join us on our journey as we continue to redefine the shopping experience and inspire a world of possibilities. <br><br>
+      </p>
+</div>
+
+<div id="au-container1">
+  <p id="about1">
+    BEADS OF STORY, STRING OF TALES. <br>
+    THESE ARE TREASURES OF CREATIVITY THAT WILL STILL BE SEEN EVEN IN DARKNESS SHINING THEIR OWN BEAUTY.
+  </p>
+</div>
+ 
+<div>
+    <footer>
+      <p id="ftext">&copy 2024. ALL RIGHTS RESERVED</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+ 

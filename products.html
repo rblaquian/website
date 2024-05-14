@@ -1,0 +1,513 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" type="image/x-icon" href="/pics/serenceI.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Henny+Penny&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Jost&family=Kalam&family=Lexend+Deca:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap" rel="stylesheet">
+ 
+    <style>
+      body{ 
+        margin: 0px;
+        background-color: #F0EBE6;
+      }
+      .card{
+        width: 250px;
+        border: .5px solid  white;
+        margin: auto;
+        margin-bottom: 80px;
+        border: 1px solid #A87453;
+        background-color: #F0EBE6;
+        padding: 10px;
+        border-radius: 0;
+        text-align: center;
+      }
+      .col{
+        padding: 20px;
+      }
+      .btn{
+        height: 30px;
+        width: 70px;
+        border: 1px solid #A87453;
+        background-color: #F0EBE6;
+        color: #A87453;  
+        margin-top: 20px;  
+        padding: 0px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn:hover{
+        background-color: #A87453;
+        transition-duration: .4s;
+        border: none;
+        color: #F0EBE6;
+      }
+      .card-body{
+        height: 100px;
+        background-color: #A87453;
+      }
+      .card-title{
+        margin-top: -10px;
+        color: #F0EBE6;
+        font-family: "Poppins", sans-serif;
+        float: left;
+      }
+      .card-text{
+        margin-top: -7px;
+        color: #F0EBE6;
+        font-family:"Poppins", sans-serif;
+        font-size: small;
+        float: left;
+      }
+      .card img{
+        height: 230px;
+        border-radius: 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .col img:hover{
+        top: 0;
+        left: 0;
+        opacity:.5;
+        transition: opacity 0.3s ease;
+      }
+      h2{
+        padding-top: 30px;
+        font-family: "Poppins", sans-serif;
+        color: #F0EBE6;
+        font-size: 40px;
+        text-align: center;
+      }
+      footer {
+        width: 100%;
+        height: 80px;
+        background-color: #A87453;
+        position: static;
+        margin-top: -60px;
+      }
+      #ftext{
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #F0EBE6;
+        padding-top: 30px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0ebe6;
+        width: 100%;
+      }
+      #navi {
+        margin: auto;
+        padding: auto;
+        margin-top: 10px;
+      }
+      #navi li{
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        border:none;
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+      #navi a{
+        color: black;
+        text-decoration: none;
+      }
+      #navi li:hover{
+        border: none;
+      }
+      #navi li::after{
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        left: 50%;
+        bottom:0;
+        background-color: black;
+        transition: all ease-in-out .2s;
+      }
+      #navi li:hover::after{
+        width: 100%;
+        left: 0;
+      }
+      #navi a.active1, a:hover{
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+      }
+      .logo {
+        float: left;
+        width: fit-content;
+        cursor: default;
+      }
+      .logo img {
+        width: 120px;
+        margin: auto;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+      #logoname {
+        margin-bottom: -1px;
+        margin-top: 10px;
+        color: #a87453;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        text-align: center;
+        font-size: 24px;
+        width: fit-content;
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+      #logoname2 {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        width: fit-content;
+        align-items: center;
+        text-decoration: underline;
+        text-decoration-color: #cba982;
+        text-underline-offset: 10px;
+      }
+      .line {
+        width: 800px;
+      }
+      .lineUp {
+        animation: 3s anim-lineUp ease-out;
+      }
+      main {
+        width: 100%;
+        height: 900px;
+        background-image: url('pics/product.jpg');
+        background-size: 100%;
+        background-position: center;
+        image-rendering: -webkit-optimize-contrast;
+      }
+      .row{
+        margin: 50px;
+      }
+      .cartt {
+        width: 200px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+      .cartt img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin-left: 160px;
+        }
+      .cartt img:hover{
+        transform: scale(1.2);
+        transition-duration: 0.5s;
+      }
+      .cartt img:active{
+        transform: translateY(4px);
+      }
+      #card{
+        color: white;
+      }
+      .hidden{
+        display: none;
+      }
+      #cart{
+        background-color: #F0EBE6;
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: -10px;
+        color: black;
+        width: 300px;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        float: right;
+        margin-right: 10px;
+      }
+      .button{
+        position: relative;
+      }
+      .cbutton{
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background-color: #F0EBE6;
+      }
+      .rbutton{
+        border-radius: 5px;
+        background-color: #F0EBE6;
+      }
+      #ok{
+        border-radius: 5px;
+        background-color: #F0EBE6;
+        margin-top: 5px;
+      }
+      #item-name, #item-price{
+        display: inline;
+      }
+      #item-name{
+        float: left;
+      }
+      #item-price{
+        float: right;
+      }
+      #item, #price{
+        display: inline;
+      }
+      #item{
+        float: left;
+      }
+      #price{
+        float: right;
+      }
+
+      @media only screen and (min-width: 1030px) and (max-width: 1440px) {
+      nav {
+        width: 100%;
+        justify-content: center;
+      }
+      #navi li {
+        padding-top: 10px;
+        margin: 10px;    
+      }
+      .cart {
+      padding-top: 10px;
+      }
+      #wel {
+      font-family: "Archivo Black", sans-serif;
+      font-weight: 400;
+      font-style: normal; 
+      font-size: 50px;
+      color: white;
+      text-transform: uppercase;
+      }
+      #logoname {
+        margin-right: 90px;
+      }
+      }
+
+      .btn-a{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    const cart = {
+      items: [],
+      addItem(item) {
+        this.items.push(item);
+        this.renderCart();
+        this.items.push(button);
+      }, calculateTotal() {
+                return this.items.reduce((total, item) => total + item.price, 0);
+            },
+      renderCart() {
+        const cartElement = document.getElementById('cart');
+        cartElement.innerHTML =  '<h3><center><b>CART</b></center></h3><br>' + '<p id="item"><b>Item</b></p>' + '<p id="price"><b>₱</b></p><br><hr>';
+        
+        this.items.forEach(item => {
+          cartElement.innerHTML += `<p id="item-name">${item.name}</p>&nbsp;` + `<p id="item-price">₱${item.price}</p><hr>`;
+      });
+          cartElement.innerHTML += `<h5><b>Total: ₱${this.calculateTotal()}</b><h5><hr>`;
+          cartElement.innerHTML += '<button class="cbutton" onclick="cbutton()">Checkout</button>&nbsp; &nbsp; &nbsp;' + '<button class="rbutton" onclick="rbutton()">Reset</button>';
+        }
+      };
+    
+      document.addEventListener("DOMContentLoaded", function() {
+      const cartIcon = document.getElementById("cart-icon");
+      const cart = document.getElementById("cart");
+      const btn = document.getElementById("btn");
+
+      cartIcon.addEventListener("click", function() {
+      cart.classList.toggle("hidden");
+        });
+      });
+
+      function addButton(name, price) {
+        cart.addItem({name, price});
+      }
+
+      function rbutton() {
+        cart.items = [];
+        cart.renderCart();
+      }
+
+      function cbutton(){
+        const cartElement = document.getElementById('cart');
+        cartElement.innerHTML = "Thank you for your choosing Serene Accessories! <br> Where quality meets passion.";
+        cartElement.innerHTML += '<center><button onclick="rbutton()" id="ok">OK</button></center>'
+      }
+  </script>
+
+  <nav>
+    <div class=" logo"><img src="https://i.ibb.co/FwPkDDN/WS-Website-draft-design-1.png" alt="logo"></div><p id="logoname">SERENE <span id="logoname2">ACCESORIES</span></p>
+    <ul id="navi">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="products.html" class="active1">PRODUCTS</a></li>
+        <li><a href="onsale.html" class="active2">ON SALE</a></li>
+        <li><a href="gallery.html" class="active3">GALLERY</a></li>
+        <li><a href="aboutus.html" class="active4">ABOUT US</a></li>
+    </ul>
+    <div id="prod"></div>
+    <div class="cartt" id="cart-icon"><img src="https://i.ibb.co/w4vpFK0/cart-icon-28356.png"></div>
+  </nav>
+
+  <div id="cart" class="hidden"></div>
+ 
+  <main></main>
+
+    <div class="row row-cols-1 row-cols-sm-4 row-cols-md-4 row-cols-lg-4 g-lg-0 g-md-0 g-sm-0 p-5">
+        <div class="col">
+          <div class="card">
+            <img src="pics/B1.jpg" class="card-img-top" alt="bracelet 1">
+            <div class="card-body items">
+              <div id="item">
+              <h5 class="card-title">Black Petuna</h5><br>
+              <p class="card-text">Php 30.00</p>
+              <button type="button" class="btn btn-light btn-a" onclick="addButton('Black Petuna', 30)">Add</button>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="pics/B2.jpg" class="card-img-top" alt="bracelet 2">
+            <div class="card-body">
+              <h5 class="card-title">Luna Hibiscus</h5><br>
+              <p class="card-text">Php 30.00</p>
+              <button type="button" class="btn btn-light" onclick="addButton('Luna Hibiscus', 30)">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="pics/B3.jpg" class="card-img-top" alt="bracelet 3">
+            <div class="card-body">
+              <h5 class="card-title">Blue Hydrangea</h5><br>
+              <p class="card-text">Php 30.00</p>
+              <button type="button" class="btn btn-light" onclick="addButton('Blue Hydrangea', 30)">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="pics/B4.jpg" class="card-img-top" alt="bracelet 4">
+            <div class="card-body">
+              <h5 class="card-title">Rainbow Rose</h5><br>
+              <p class="card-text">Php 30.00</p>
+              <button type="button" class="btn btn-light" onclick="addButton('Rainbow Rose', 30)">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+              <img src="pics/B5.jpg" class="card-img-top" alt="bracelet 5">
+              <div class="card-body">
+                <h5 class="card-title">Firefly Sunshine</h5><br>
+                <p class="card-text">Php 30.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Firefly Sunshine', 30)">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="pics/B6.jpg" class="card-img-top" alt="bracelet 6">
+              <div class="card-body">
+                <h5 class="card-title">Verbena Samira</h5><br>
+                <p class="card-text">Php 30.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Verbena Samira', 30)">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="pics/B7.jpg" class="card-img-top" alt="bracelet 7">
+              <div class="card-body">
+                <h5 class="card-title">Carnation</h5><br>
+                <p class="card-text">Php 30.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Carnation', 30)">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="pics/B8.jpg" class="card-img-top" alt="bracelet 8">
+              <div class="card-body">
+                <h5 class="card-title">Green Daylily</h5><br>
+                <p class="card-text">Php 30.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Green Daylily', 30)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="pics/R1.jpg" class="card-img-top" alt="ring 1">
+              <div class="card-body">
+                <h5 class="card-title">White Dianthus</h5><br>
+                <p class="card-text">Php 15.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('White Dianthus', 15)">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="pics/R2.jpg" class="card-img-top" alt="ring 2">
+              <div class="card-body">
+                <h5 class="card-title">Marigold</h5><br>
+                <p class="card-text">Php 15.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Marigold', 15)">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="pics/R3.jpg" class="card-img-top" alt="ring 3">
+              <div class="card-body">
+                <h5 class="card-title">Bells-of-Ireland</h5><br>
+                <p class="card-text">Php 15.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Bells-of-Ireland', 15)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="pics/R4.jpg" class="card-img-top" alt="ring 4">
+              <div class="card-body">
+                <h5 class="card-title">Delphinium</h5><br>
+                <p class="card-text">Php 15.00</p>
+                <button type="button" class="btn btn-light" onclick="addButton('Delphinium', 15)">Add</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div>
+        <footer>
+          <p id="ftext">&copy 2024. ALL RIGHTS RESERVED</p>
+        </footer>
+      </div>
+</body>
+</html>
+
